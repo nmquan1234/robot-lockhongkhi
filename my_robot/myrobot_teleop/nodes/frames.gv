@@ -1,0 +1,16 @@
+digraph G {
+"base_link" -> "Caster_Back_Link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1594836270.531 sec old)\nBuffer length: 0.000 sec\n"];
+"base_footprint" -> "base_link"[label="Broadcaster: /kinect_base_link5\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1594836270.531 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "Caster_Front_Link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1594836270.531 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "body_Link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1594836270.531 sec old)\nBuffer length: 0.000 sec\n"];
+"odom" -> "base_footprint"[label="Broadcaster: /turtlebot3_fake_node\nAverage rate: 30.196 Hz\nMost recent transform: 1594836270.503 ( 0.028 sec old)\nBuffer length: 4.934 sec\n"];
+"base_link" -> "imu_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1594836270.531 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "base_scan"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1594836270.531 sec old)\nBuffer length: 0.000 sec\n"];
+"map" -> "odom"[label="Broadcaster: /amcl\nAverage rate: 13.713 Hz\nMost recent transform: 1594836270.859 ( -0.328 sec old)\nBuffer length: 4.886 sec\n"];
+"base_link" -> "Left_Wheel_Link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 30.196 Hz\nMost recent transform: 1594836270.503 ( 0.028 sec old)\nBuffer length: 4.934 sec\n"];
+"base_link" -> "Right_Wheel_Link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 30.196 Hz\nMost recent transform: 1594836270.503 ( 0.028 sec old)\nBuffer length: 4.934 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1594836270.531"[ shape=plaintext ] ;
+ }->"map";
+}

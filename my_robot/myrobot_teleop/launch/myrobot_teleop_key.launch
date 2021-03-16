@@ -1,0 +1,7 @@
+<launch>
+  <param name="model" value="myrobot"/>
+
+  <!-- myrobot_teleop_key already has its own built in velocity smoother -->
+  <node pkg="myrobot_teleop" type="myrobot_teleop_key" name="myrobot_teleop_key"  output="screen">
+  </node>
+</launch>

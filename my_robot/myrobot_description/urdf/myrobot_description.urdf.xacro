@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="myrobot_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0930889531665849 0.114954679023823 0.213592123167538"
+        rpy="0 0 0" />
+      <mass
+        value="2.4187019942906" />
+      <inertia
+        ixx="0.0097167538132348"
+        ixy="1.82727203994774E-07"
+        ixz="5.31083996344602E-07"
+        iyy="0.0126422422196956"
+        iyz="3.16519494315015E-07"
+        izz="0.00864764224782448" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_Link">
+    <inertial>
+      <origin
+        xyz="-1.11022302462516E-16 0.00731467256967719 9.54097911787244E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0370924956096524" />
+      <inertia
+        ixx="1.57256230043058E-05"
+        ixy="-8.28048078686532E-20"
+        ixz="1.05879118406677E-22"
+        iyy="3.01227753803978E-05"
+        iyz="-2.00954161708278E-21"
+        izz="1.57256230043058E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot_description/meshes/left_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot_description/meshes/left_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint"
+    type="fixed">
+    <origin
+      xyz="0.14232 -0.092107 0.013289"
+      rpy="0 -0.038545 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_Link">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 0.00731467256967722 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0370924956096531" />
+      <inertia
+        ixx="1.57256230043061E-05"
+        ixy="-3.57225738231017E-19"
+        ixz="1.77876918923419E-20"
+        iyy="3.01227753803983E-05"
+        iyz="1.62446679760193E-20"
+        izz="1.57256230043061E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot_description/meshes/right_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot_description/meshes/right_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_Joint"
+    type="fixed">
+    <origin
+      xyz="0.14232 -0.33711 0.013289"
+      rpy="-3.1416 0.82878 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
